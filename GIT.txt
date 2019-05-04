@@ -1,0 +1,264 @@
+cd 'project folder'
+
+git init
+git status
+git add prg      -- this will add prg file to git from project folder
+git add .        -- this will add all files from project folder
+
+
+git commit -m "commited"        -- -m stands for message which will pass after successful commit
+git log
+
+git config --global user.email "xxxx"
+git config --global user.name "SM"
+git checkout                   -- this command will revert the changes made after last commit.
+
+git push -u origin --all       -- this command will push the scripts to repos
+
+Commit:
+git commit -m "description of the commit that we are doing"
+git log -n 2                  -- this will return the last 2 commits
+git log --since=2019-01-01
+git log --grep="expression to search"
+-----------------------------------------------------
+The basic cycle of GIT.
+
+1. Make changes
+2. Add changes
+3. Commit changes
+------------------------------
+Git work flow.
+--------------
+below are the 3 components of git.
+1. working folder
+2. staging index
+3. repository
+
+adding first time:
+------------------
+1. first time we create file in working folder and make changes. we name the file as x.
+2. git add command will add x to staging index.
+3. git commit and push will add x to the repository.
+
+making changes to x:
+---------------------
+4. make changes to x in working folder
+5. git add will add the new modifications to the staging index.
+6. git commit will update x with new modifications in repository.
+
+note: when we are working on a file in git we always refer it as one single file whether it is in 
+      working folder or added in staging index or commited to repository. each commit will create a copy of file which has changes related to that commit
+
+-- GIT generates a checksum for each change set.
+   - checksum algorithm converts data into simple number
+   - same data always equals same checksum.
+-- data integrity is fundamental.
+-- GIT uses SHA-1 algorithm to create checksum
+   - checksum 40 character hexadecimal value(0-9)(a-z)
+
+-- the checksum number will also have following information 
+	-parent commit checksum number
+	-author
+	-msg
+
+this the git will know the sequence of commits like which is parent commit and which is the child.
+
+
+-- git diff             this will simply show the changes that are made on each since the last commit.
+---------------------------------------------------------------------------------
+if we want to delete all the unstaged files the we can use the below command.
+
+git clean -n    this command will show all the unstaged files that will get deleted
+git clean -f    this command will delete all the unstaged files
+
+----------------------------------------------------------------------------------
+UNDO working directory
+------------------------
+if we made a change to any file and we want to revert back to previuos change then we use the checkout command
+
+git checkout filename
+
+UNDO staging index
+------------------
+if we made a change and added to the staging index using git add command and we want to unstage the file then
+we use the git reset HEAD command. we generally do this when we have changes in other files and we want to stage
+all files together to commit we will use this option.
+
+git reset HEAD filename
+
+
+UNDO repository
+---------------
+generally we dont revert the changes in repository we will add new commit to revert the committed changes or
+we move the HEAD to specific commit in three different ways.
+
+Before learning those 3 ways we need to understand the git amend process.
+AMEND:
+-------
+
+if we have done commit making 2 changes which will generate a unique commit number. At the last moment before
+deployment we need to make another change which should be included in the last commit then we can use amend.
+
+git commit --amend -m "new message"
+	
+	after running the above command the old message of the commit will be overwritten by new message and
+	the old commit number will be gone and a new number will be generated.
+	we can copy and reuse the message from previous commit but for every amend it will generate new commit
+	number in the git.
+
+
+CHECKOUT:
+-----------
+we can use the checkout in 2 different ways as below.
+
+1. to overwrite the changes in a file in the working directory using the last commiteed file change.
+
+git checkout filename
+
+	the above command will replace the file in working directory but not in staging index.
+
+2. if we want to undo the changes of a file which was committed previously some 2 or more commits back then we use the
+   below command to checkout the element from specific commit and place the element in staging index but not
+   the working directory. 
+
+git checkout older_commit_number filename
+
+	after the above command the file will be placed in the staging index but not in the working directory.
+	we can see the difference of the file in staging index and working directory using get diff command.
+
+REVERT:
+-------
+
+the git revert command will simply undo all the changes made by a commit. we will use the revert when we are making
+simple changes.
+
+git revert commit_number
+
+it will undo all the changes made by the commit and create a new commit with new number attached.
+ 
+-----------------------------------------------------------------------------
+RESET: Reset is very powerful when we use to undo the commits. The revert will create a new commit and the old
+------ commits will still reside on the log but reset will overwrite the commits and the commits which are 
+       overwritten will be recycled over the period of time.
+
+
+there are 3 types of git reset.
+
+git reset --soft commitnumber
+	changes the pointer to specified commit
+	does not change the staging index and working directory.
+
+git reset --mixed commitnumber
+	changes the pointer to the specified commit
+	changes staging index to match the repository and does not change the working directory
+
+git reset --hard commitnumber
+	changes the staging index and working directory to match the repository.
+
+
+---------------------------------------------------
+BRANCHES:
+---------
+
+git branch         -- this is will show all branches available. * indicates that currently we are working with that branch
+
+git branch working      -- this command creates a new branch called "working"
+
+git checkout working    -- this command will switch to the branch "working"
+			   when we are switching from one branch to another the changes made in the current branch should be mostly clean.
+			   when we modify a file in current branch and did not commit the change it will not allow to switch to another branch
+			   but when we just copy a new file then it will allow to switch. In another words if we make changes to any of the files
+			   which are in staging index or repository it will not allow you to switch but the files which are not indexed or commited will allow.
+
+
+git diff branch1..branch2    -- this command will compare the changes between 2 branches.
+
+git branch --merged          -- this command will show the current branch has changes included from which list of branches. 
+								* before the branch shows which is the current branch. The branches which are not listed from the command has changes which are not commited in the current branch.
+
+
+
+
+
+git branch --move oldname newname      -- this command will rename the branch
+git branch -m oldname newname
+
+git branch -d branchname               -- this command will delete the branch. we cannot delete a branch if we are on the same 											   branch. we need to checkout on some other branch and delete the branch.
+									-- when we are deleting a branch and we have changes made on that branch which are not merged on any other branch then git will not allow us to delete the branch with "-d" option and it will prompt to delete using "-D" option.
+
+
+__git_ps1  
+           -- this command will show the current branch.
+
+
+MERGE:
+-------
+
+git checkout target_branch
+
+git merge source_branch
+
+					-- in order to merge one branch with another branch. first we need to checkout to the target branch we want to move the changes. then run git merge source_branch will move changes made in source to target branch.
+					The branch which you want to merge should always be clean otherwise things will become complicated.
+
+git merge --no--ff branch
+                   -- this command will not do fast forward merge and create a new commit.
+
+git merge --ff-only branch
+                   -- this command will do only fast forward merge in case if it possible. if fast forward merge is not possible then it will not merge anything.
+                    	
+Merge Conflicts: There are 3 ways to handle merge conflicts.
+----------------
+
+1. abort merge
+2. resolve conflicts manually
+3. use a merge tool
+
+STASH:
+-------
+
+when we make some changes in a branch and dont want to commit yet and wanted to switch to other branch and check something where the switching the branch is not allowed since the changes are made and commit is not done, then we stash the changes which will save the copy of changes which will not reside on repos, staging index or working directory and which is somewhere else.
+
+git stash save
+          -- this command will save the changes made after last commit and head is reset to last commit.
+
+git stash list
+		  -- will list out all the stashed changes of all branches.
+
+git stash show stash@{0}
+          -- will show the number of changes applied like number of inserts, deletes or updates
+
+
+git stash show -p stash@{0}
+          -- will show the lines of code where the changes are made in file.
+
+
+git stash pop stashnumber
+          -- this will apply the changes in the stash to branch and delete the copy in stash.
+
+git stash apply stashnumber
+          -- this will apply the changes in the stash to branch and keep the copy in stash.
+
+git stash drop stashnumber
+          -- it will delete the stashed changes
+
+          note: In show,pop,apply,drop command if you dont specify the stashnumber then will pickup the top one in the list.
+
+
+
+          
+
+Adding git account from local machine to github
+
+git remote add origin https://github.com/gitaccount/repos
+			-- after this command git will popup for github account credentials
+
+git push -u origin master
+			-- once you run the command all the files from local machine will load into github account.
+
+remote connections:
+--------------------
+cat .git/config
+
+	-- To see the detials of the remote server we can use the above command from local machine where store our files in git.
+ 
