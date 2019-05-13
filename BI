@@ -1,1 +1,113 @@
-Business Intelligence:
+Business Intelligence: The process of drawing critical insights from data to inform decisions.
+
+Notions of Business inelligence:
+1. Big data
+2. Dashbards
+3. ForeCasting
+4. Predictive analysis
+5. Data Visualisation.
+
+what BI can in general tell you ?
+
+1. what is driving my business today ?
+2. what emerging trends should I be aware of ?
+3. what will happen if no one intervenes ?
+
+make decisions like:
+1. discontinue a product due to less usage or sales
+2. increase production of product in more regions due to increase in demand.
+
+--> so we use BI to prove all the above points using the data.
+
+Gathering the business needs:
+------------------------------
+-- Decision making needs
+-- Relevant data and information
+
+ask clients the following:
+1. What problems does the business wants to solve ?
+2. does the existing product align with the growth strategy ?
+3. what data is relevant to calculate the products commercial viability ?
+4. where can the data be sourced from ?
+
+Information requirements in brief:
+-----------------------------------
+1. statement of business operations
+2. overview of the problems
+3. relevent KPI's
+4. Data needed
+
+Profiling the business:
+------------------------
+
+Note: Always try to understand the business model first before looking into business problems 
+-----
+
+Business model: Describes how a business operates, generates income and manages costs.
+---------------
+
+
+Business profiling in short:
+-----------------------------
+1. what does it do ?
+2. who are the customers ?
+3. who is the competition ?
+4. what is your clients competative differentiator ?
+5. do they understand the price sensitivity ?
+
+
+1. what does client think is causing the profitability problem ?
+2. what does client think are the business threats ?
+3. how does client percive the organisational culture and strengths ?
+
+
+Reviewing the source data:
+--------------------------
+
+define your data requirements 
+  -- prepare a list of required data fields.
+  -- understand the structure of the data.
+  -- data should be well defined and structured
+  
+ Data granularity:
+ ------------------
+ The lowest level that data can be in a target set. If we have data at highest granular level we can analyse and report 
+ the data in all possible ways.
+ 
+ for example: if we have data for each month in aggregated format that may not help well to analyse. we may need the data on a weekly
+ ,daily, hourly, per minute or per second. the least level of data will help in more accurate analysis for a time series chart.
+ 
+ Data relevance:
+ ----------------
+ 1. Is this information relevant for solving my clients problem ?
+ 2. will this data provide the insights to make informed  business decisions ?
+ 
+ Data driven insights:
+ ----------------------
+ what the problem is ?
+ why the problem exists ?
+ how to improve ?
+ 
+ Illustrating results:
+ ---------------------
+ client my wants to know after seeing the results of our analysis.
+ 
+ 1. why is the number so high or low ?
+ 2. can you show the data that sits underneath a graph ?
+ 3. can you apply few filters ?
+ 
+ 
+ prepare the final report:
+ --------------------------
+ 1. business problems to solve ? (where the journey started and where the problems occured ?)
+ 2. restate why you are hired ? (expain about your expertise)
+ 3. outline the process and methodology
+ 4. data analysed
+ 5. tools used to analyse the data
+ 6. share insights (should tell actions to take to solve the business problems)
+ 
+ 
+ 
+ 
+ 
+ 
