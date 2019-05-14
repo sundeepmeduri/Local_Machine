@@ -1,0 +1,13 @@
+R Programming:
+--------------
+
+R is open source developed for statistical analysis.
+R is a command line programming language
+R can be intgrated with excel,SAS,SPSS, python etc. 
+
+down r from R-project.org and IDE from Rstudion.com
+
+R studio commands
+-----------------
+ctrl L for clear screen
+q() for quit
