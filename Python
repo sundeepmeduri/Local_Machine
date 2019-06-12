@@ -8,6 +8,40 @@ import random
 multi line comment
 '''
 ---------------------------------------------------
+### working with strings
+
+msg = "Hello world"
+
+greet = 'how are you'
+
+print(msg)
+
+print(len(msg))
+
+print(msg[0:5])
+
+print(msg[10])
+
+print(msg.lower())
+
+print(msg.upper())
+
+print(msg.count('l'))
+
+print(msg.find('o'))
+
+print(msg.replace('world','universe'))
+
+print(msg +'.. '+ greet)
+
+print("{},{},'good'".format(msg,greet))
+
+print(dir(msg)) # shows all functions that can be applied on the variable based on its data type
+
+print(help(str)) # it will show all the functions and usage of the string data type.
+
+print(help(str.lower))
+
 print("Hello world")
 
 x = "\" this is line"
@@ -16,7 +50,7 @@ new line '''
 
 z = x + y # concatination
 print("%s %s"%(x,y)) # another way of concatenation
----------------------------------------------------
+
 print('\n' * 5) # prints 5 blank lines
 ---------------------------------------------------
 list:
