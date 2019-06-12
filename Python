@@ -1,13 +1,13 @@
 import sys
 import os
 import random
-
+---------------------------------------------------
 # single line comment
 
 '''
 multi line comment
 '''
-
+---------------------------------------------------
 print("Hello world")
 
 x = "\" this is line"
@@ -16,6 +16,24 @@ new line '''
 
 z = x + y # concatination
 print("%s %s"%(x,y)) # another way of concatenation
+---------------------------------------------------
+print('\n' * 5) # prints 5 blank lines
+---------------------------------------------------
+list:
 
-print('\n' * 5) # prints 5 new lines
+list1 = ['1','2','3']
+print(list1)
+print(list1[1])
+list1.append('4')
+print(list1)
+print(list1[1])
+del list1[1]
+print(list1)
+print(list1[1])
+print(list1[1:2])
+print(list1[2:2])
+print(list1[0:1])
+----------------------------------------------------------------------
+
+
 
