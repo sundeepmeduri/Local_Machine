@@ -52,22 +52,140 @@ z = x + y # concatination
 print("%s %s"%(x,y)) # another way of concatenation
 
 print('\n' * 5) # prints 5 blank lines
----------------------------------------------------
-list:
-
-list1 = ['1','2','3']
-print(list1)
-print(list1[1])
-list1.append('4')
-print(list1)
-print(list1[1])
-del list1[1]
-print(list1)
-print(list1[1])
-print(list1[1:2])
-print(list1[2:2])
-print(list1[0:1])
 ----------------------------------------------------------------------
+### working with numeric data
+
+# Arithmetic Operators:
+# Addition:       3 + 2
+# Subtraction:    3 - 2
+# Multiplication: 3 * 2
+# Division:       3 / 2
+# Floor Division: 3 // 2
+# Exponent:       3 ** 2
+# Modulus:        3 % 2
+
+
+# Comparisons:
+# Equal:            3 == 2
+# Not Equal:        3 != 2
+# Greater Than:     3 > 2
+# Less Than:        3 < 2
+# Greater or Equal: 3 >= 2
+# Less or Equal:    3 <= 2
+
+
+num = 3
+print(type(num))
+
+num = 3.14
+print(type(num))
+
+print(abs(-3))
+
+num1 = 5
+num2 = 5
+
+print(num1 == num2)
+print(num1 != num2)
+print(num1 >= num2)
+print(num1 <= num2)
+print(num1 > num2)
+print(num1 < num2)
+
+num1 = '5'
+num2 = '5'
+
+print(num1 + num2)
+
+num1 = '5'
+num2 = '5'
+
+print(num1 + num2)
+--------------------------------------------------------
+### lists ,tuples and sets
+
+courses = ['bi','db','sql','python']
+
+print(courses)
+print(len(courses))
+print(courses[0])
+print(courses[2])
+
+# access items in reverse order
+print(courses[-1])
+print(courses[-2])
+
+# try to access item that does not exist you will get error
+#print(courses[4])
+
+print(courses[0:3]) # access all elements starting from 0 excluding 3
+print(courses[1:2]) # access all elements starting from 1 excluding 2
+print(courses[:2])  # list assumes we are starting from 0
+print(courses[2:])  # list assumes we need access elements starting from 2 till end.
+
+# add element to list
+courses.append('R pro')
+print(courses)
+
+# insert will add element at specified index position
+courses.insert(1,'pbi')
+print(courses)
+
+new_courses = ['oracle','tableau']
+
+courses.insert(4,new_courses) # adding another list as element in the list
+print(courses)
+
+courses.append(new_courses)
+print(courses)
+
+courses.extend(new_courses) # this will add elements of the list as elements but not like a list
+print(courses)
+
+new_courses = ['oracle','tableau',['alteryx']]
+
+courses.extend(new_courses)
+print(courses)
+
+courses.remove('tableau') # removes first occurance of the element
+print(courses)
+
+courses.pop() # by default removes the last element in the list
+print(courses)
+courses.pop()
+print(courses)
+
+popped = courses.pop() # when we execute pop function and assign it to a variable. the variable will grab the popped item
+print(popped)
+
+courses.reverse()
+print(courses)
+
+if type(courses) == list:
+	print('this is list')
+else:
+	print('this is not a list')
+
+
+for item in courses:
+	if type(item) == list:
+		courses.remove(item)
+
+print(courses)
+courses.sort()
+print(courses)
+courses.sort(reverse=True) # sort in descending
+print(courses)
+
+
+
+
+
+
+
+
+
+
 
 
 
