@@ -1,6 +1,9 @@
 Descendants:
-
+------------
 Descendants(member,level,desc_flags)
+Descendants(member,distance,desc_flags)
+
+distance: 1,2,3 etc level numbers
 
 Desc_flags:
 self
