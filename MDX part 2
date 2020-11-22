@@ -17,7 +17,6 @@ leaves
 
 Note: SELF and Leaves work same way when we pass level in the argument. When we dont pass level argument the leaves will pass the least level data of the hirarchy.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Parent: using this function we can get details of parent at any level.
 --------
 Parent(member.parent)
@@ -32,17 +31,14 @@ if there is a hirarchy as below.
 day.parent returns -->month
 day.parent.parent returns --> quarter and so on...
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Ancestor: we can pull the members of any level (above or below) by passing the member and level 
 ---------
 Ancestor(member,Level)
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Ascendants:This function will retun all the parents including the all members.
 ------------
 Ascendants(member)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 siblings:  This function will bring all the other members of member in the same level which are siblings.
 ----------
 member.siblings
@@ -66,6 +62,22 @@ output:
   Year
   quarter
   month
+
+Oridinal: this function will return the level number in the hierarchy.
+---------
+select level.ordinal on columns from cube
+
+.    year
+..   qtr
+...  month
+
+when we apply the ordinal then it will return as follows.
+1,2,3
+
+
+Order:
+------
+Order(set,Numeric expression,Asc|Desc|Break Asc|Break Desc)
 
 
 
