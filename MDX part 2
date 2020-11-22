@@ -14,3 +14,6 @@ self_and_before
 self_and_after
 self_before_after
 leaves
+
+Note: SELF and Leaves work same way when we pass level in the argument. When we dont pass level argument the leaves will pass the least level data of the hirarchy.
+
