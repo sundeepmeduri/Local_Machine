@@ -1,4 +1,4 @@
-Descendants:
+Descendants: using this function we can get members of above and below level.  
 ------------
 Descendants(member,level,desc_flags)
 Descendants(member,distance,desc_flags)
@@ -16,4 +16,33 @@ self_before_after
 leaves
 
 Note: SELF and Leaves work same way when we pass level in the argument. When we dont pass level argument the leaves will pass the least level data of the hirarchy.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Parent: using this function we can get details of parent at any level.
+--------
+Parent(member.parent)
+
+if there is a hirarchy as below.
+
+.      year
+..     quarter
+...    month
+....   day
+
+day.parent returns -->month
+day.parent.parent returns --> quarter and so on...
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ancestor: we can pull the members of any level (above or below) by passing the member and level 
+---------
+Ancestor(member,Level)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ascendants:This function will retun all the parents including the all members.
+------------
+Ascendants(member)
+
+
+
+
 
