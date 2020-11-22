@@ -79,6 +79,18 @@ Order:
 ------
 Order(set,Numeric expression,Asc|Desc|Break Asc|Break Desc)
 
+select 
+{[Measures]}
+on columns,
+order(
+{
+Dimension_values
+},
+[Measures]
+,asc)
+on rows
+from
+cube
 
 
 
