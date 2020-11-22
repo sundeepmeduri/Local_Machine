@@ -1,0 +1,13 @@
+Descendants:
+
+Descendants(member,level,desc_flags)
+
+Desc_flags:
+self
+before
+after
+before_and_after
+self_and_before
+self_and_after
+self_before_after
+leaves
