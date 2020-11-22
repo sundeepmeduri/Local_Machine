@@ -74,7 +74,7 @@ select level.ordinal on columns from cube
 when we apply the ordinal then it will return as follows.
 1,2,3
 
-
+-------------------------------------------------------------------------------------------------------------
 Order:
 ------
 Order(set,Numeric expression,Asc|Desc|Break Asc|Break Desc)
@@ -87,10 +87,25 @@ order(
 Dimension_values
 },
 [Measures]
-,asc)
+,basc)
 on rows
 from
 cube
+
+topcount:
+----------
+topcount(set,number,measure)
+
+NOTE: The difference topcount and order that order will break at every hierarchy and topcount does not follow heirarchy. 
+-------------------------------------------------------------------------------------------------------------
+
+head:
+-------
+select head(set,number of records) on columns from cube
+
+Rank: returns position of member based on set of values.
+------
+rank(member,set)
 
 
 
