@@ -42,7 +42,20 @@ Ascendants:This function will retun all the parents including the all members.
 ------------
 Ascendants(member)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+siblings:  This function will bring all the other members of member in the same level which are siblings.
+----------
+member.siblings
 
+lastchild,firstchild: These functions will bring the first member or last member in the below level of current member. These functions can be used only when there are multiple hirarchies.
+----------------------
+(member.firstchild)
+(member.lastchild)
 
-
+Prevmember,nextmember,Lead,lag: These functions can be applied on member and works only for current level.
+-------------------------------
+member.prevmember
+member.nextmember
+member.lead(2)
+member.lag(3)
 
