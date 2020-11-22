@@ -59,3 +59,14 @@ member.nextmember
 member.lead(2)
 member.lag(3)
 
+Hierarchize: when we pull multiple members in a set in a different order than actual hierarchy then we can use the Hierarchize function show them in order.
+-------------
+select Hierarchize( {quarter,year,month} )
+output:
+  Year
+  quarter
+  month
+
+
+
+
