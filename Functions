@@ -1,0 +1,14 @@
+
+def func(*a,**k):
+
+	if not a :
+		print('No arguments present or empty tuple')
+	else:
+		print(a)	
+
+	if not k :
+		print('No Key word arguments present or empty set')
+	else:
+		print(k)	
+
+func('sun',a=1,b=2)		
