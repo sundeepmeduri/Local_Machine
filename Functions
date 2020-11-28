@@ -1,4 +1,3 @@
-
 def func(*a,**k):
 
 	if not a :
@@ -12,3 +11,9 @@ def func(*a,**k):
 		print(k)	
 
 func('sun',a=1,b=2)		
+
+positional = ['geetesh','yeshwin']
+kw = {'a':1,'b':2}
+
+func(positional,kw)
+func(*positional,**kw)
