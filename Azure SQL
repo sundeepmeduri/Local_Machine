@@ -1,1 +1,19 @@
 
+
+Paas -- platform as a service
+
+Azure Sql is Daas -- Database as a service
+-------------------------------------------
+Full managed
+Predictable performance and pricing
+Elastic pool for unpredictable workloads
+99.99% availability (52 mins of downtime for year)
+Geo replication and restore services
+Supports exisiting SQL Server libraries and API's
+secure and complaint for sesitive data(data masking, encryption)
+
+Iaas -- infrastructure as a service
+-------------------------------------
+SQL server in
+
+
