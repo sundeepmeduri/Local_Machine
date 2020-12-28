@@ -12,8 +12,68 @@ Geo replication and restore services
 Supports exisiting SQL Server libraries and API's
 secure and complaint for sesitive data(data masking, encryption)
 
-Iaas -- infrastructure as a service
+Iaas -- infrastructure as a service:
 -------------------------------------
-SQL server in
+SQL server installed on Azure VM's
+Manage manually
+Take backusps and maintain server
+Migrate without any database change
+Full control over database engine
+Use the exisitng lisence.
+
+Maintain operating cost(which is extra cost)
+Maintain SQL Server(which is extra cost)
+DR is also your resposibilty
+Performance is also your resposibility
+Change control like DB changes.Change control is you responsibilty
+Security
+
+
+
+
+Paas -- Platform as a service:
+-------------------------------------
+Azure SQL Database (DBaas). create a database resource and use it as a service.
+Every thing is taken care by Microsoft.
+Additional feature -- Built in high availability, Intelligense.
+Pay as you go
+scale up or scale out without any interuption.
+Multiple deployment models
+
+Choose right service tier
+Test the high availability and DR
+Azure has inbuilt performance report monitering
+Change control is you responsibilty
+Security tools are present to moniter
+Builtin backup, recovery and patches
+Builtin advanced intelligense and security
+
+PAAS has 3 different types of deployment options
+
+1. Single database:
+single isolated database which is perfect for application having single database as a source.
+Has it own guaranted compute power, Memory and storage
+
+2. Elastic pool
+Collection of single databases with a shared set of resources such as CPU and memoy. Resources are shared equally among the databases.
+
+3. Managed Instance(Most recent)
+Aset of databases that can be used together, easy migration of on-premises databases.
+Dedicated instance of SQL server in your virtual network
+Each managed instance has its guaranteed resources which are shared by the managed instance databases equally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
