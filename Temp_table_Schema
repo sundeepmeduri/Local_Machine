@@ -1,0 +1,12 @@
+Below query gets the temp table schema
+
+SELECT 
+  c.name, 
+  c.column_id, 
+  c.system_type_id, 
+  t.name, 
+  c.max_length, 
+  t.precision 
+FROM tempdb.sys.columns c
+JOIN tempdb.sys.types t ON c.system_type_id = t.system_type_id
+WHERE c.object_id = OBJECT_ID(N'tempdb..#temp');
