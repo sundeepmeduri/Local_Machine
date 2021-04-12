@@ -1,4 +1,4 @@
-Below query gets the temp table schema
+--Below query gets the temp table schema
 
 SELECT 
   c.name, 
